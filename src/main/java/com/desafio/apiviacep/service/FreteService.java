@@ -21,7 +21,7 @@ public class FreteService {
             frete.setFrete("R$15,98");
         }//Sul
         else if (uf .equals("PR")  | uf .equals("RS")  | uf .equals("SC") ){
-            frete.setFrete("17,30");
+            frete.setFrete("R$17,30");
         }//Norte
         else if (uf .equals("AC")  | uf .equals("AP" ) | uf .equals("AM")  | uf .equals("PA") | uf .equals("RO") |
                 uf .equals("RR") | uf .equals("TO") ){
