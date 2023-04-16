@@ -1,6 +1,6 @@
 package com.desafio.apiviacep.model;
 
-public class EnderecoRequest {
+public class CepRequest {
 
     private String cep;
 

@@ -1,14 +1,10 @@
 package com.desafio.apiviacep.service;
 
 import com.desafio.apiviacep.interfaces.CepFeign;
-import com.desafio.apiviacep.model.EnderecoRequest;
+import com.desafio.apiviacep.model.CepRequest;
 import com.desafio.apiviacep.model.EnderecoResponse;
-import com.desafio.apiviacep.model.Frete;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.zip.DataFormatException;
 
 @Service
 public class CepService {
@@ -16,10 +12,10 @@ public class CepService {
     @Autowired
     private CepFeign cepFeign;
 
-    public EnderecoResponse executa(EnderecoRequest request) {
+    public EnderecoResponse executa(CepRequest request) {
         if (request.getCep() != null){
             String cep = request.getCep().trim().replace("-","");
-            if (cep.length() == 8 && cep.chars().allMatch(x -> Character.isDigit(x))){
+            if (cep.length() == 8 && cep.chars().allMatch(Character::isDigit)){
                 return cepFeign.buscarEnderecoCep(cep);
             }
         }
