@@ -25,7 +25,7 @@ public class Steps {
 
     @When("Usuarios fazem uma consulta de um cep válido")
     public void usuarios_fazem_uma_consulta_de_um_cep_válido() throws IOException {
-        HttpPost request = new HttpPost("http://localhost:" + 8080 + "/consulta");
+        HttpPost request = new HttpPost("http://localhost:" + 8080 + "/v1/consulta-endereco");
         StringEntity entity = new StringEntity(jsonString);
         request.addHeader("content-type", APPLICATION_JSON);
         request.setEntity( entity);

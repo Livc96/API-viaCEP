@@ -22,7 +22,7 @@ public class CepController {
     private FreteService freteService;
 
     @ApiOperation("Método para retornar o endereço e o frete de acordo com a sua região. ")
-    @PostMapping("/consulta")
+    @PostMapping("/v1/consulta-endereco")
     public ResponseEntity returnCep(@RequestBody CepRequest cepRequest) {
         try {
             EnderecoResponse endereco = cepService.executa(cepRequest);
