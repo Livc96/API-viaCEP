@@ -7,5 +7,3 @@ Feature: Testando uma REST API para consultar um cep
   Scenario: Consultar cep
     When Usuarios fazem uma consulta de um cep válido
     Then o servidor deve retornar o corpo e o status de sucesso
-
-
